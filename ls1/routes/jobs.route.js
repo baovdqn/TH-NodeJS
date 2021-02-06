@@ -1,27 +1,16 @@
 const express = require('express');
 
-const db = require('../db')
+const controller = require('../controllers/jobs.controller')
 
 const router = express.Router();
 
 
-router.get('/', (req,res)=>{
-    res.render('jobs/index',
-    {
-        jobs: db.get('jobs').value()
-    });
-});
+router.get('/', controller.index);
 
 // job create
 
-router.get('/create',(req,res)=>{
-    res.render('jobs/create');
-})
+router.get('/create',controller.create);
 
-router.post('/create',(req,res)=>{
-    // console.log(req.body);
-    db.get('jobs').push(req.body).write();
-    res.redirect('/jobs')
-});
+router.post('/create',controller.postCreate);
 
 module.exports = router;

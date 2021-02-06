@@ -1,6 +1,10 @@
 extends ../layout/common
 block content
-    h1 Thêm 1 ngành hot 
+    h1 Thêm 1 ngành hot
+    if errors
+        .alert.alert-danger=errors
     form(action="/jobs/create" method='POST')
-        input(type="text" name='name')
-        button Create
+        .form-group
+            label(for="name") Tên nghề
+            input.form-control(type="text" name='name' id='name')
+            button.btn.btn-primary.mt-3 Create
