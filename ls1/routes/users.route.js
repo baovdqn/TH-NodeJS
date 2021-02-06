@@ -1,6 +1,7 @@
 const express = require('express');
 
 const controller = require('../controllers/users.controller')
+const validate = require('../validate/users.validate')
 
 const router = express.Router();
 
@@ -13,7 +14,7 @@ router.get('/search', controller.search);
 router.get('/create', controller.create);
 
 // create method post
-router.post('/create', controller.postUser);
+router.post('/create',validate.postCreate, controller.postUser);
 
 // View user use route params
 router.get('/:id', controller.get);

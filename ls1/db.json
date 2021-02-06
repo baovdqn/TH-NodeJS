@@ -16,6 +16,11 @@
       "name": "Phạm Trọng Bảo",
       "phone": "0383829797",
       "id": "IUdhHYXIX"
+    },
+    {
+      "name": "Đỗ Viết Mạnh",
+      "phone": "0383829797",
+      "id": "N-luhdcBS"
     }
   ],
   "jobs": [
@@ -30,6 +35,9 @@
     },
     {
       "name": "Giáo viên"
+    },
+    {
+      "name": "Lái xe tăng "
     }
   ]
 }
