@@ -40,8 +40,22 @@ module.exports.get = (req,res)=>{
 
 module.exports.postUser = (req,res)=>{
     req.body.id = shortid.generate();
-    db.get('users')
-    .push(req.body)
-    .write()
-    res.redirect('/')
+    const errors = [];
+    if(!req.body.name){
+        errors.push('Chưa nhập name');
+    }
+
+    if(!req.body.phone){
+        errors.push('Chưa nhập số điện thoại');
+    }
+
+    if(errors.length){
+        res.render('users/create',{
+        errors: errors,
+        values: req.body
+    })
+        return;
+    }
+    db.get('users').push(req.body).write()
+    res.redirect('/users')
 }

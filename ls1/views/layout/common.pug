@@ -1,8 +1,14 @@
 html
     head
-        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css",rel="stylesheet")
+        link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css', integrity='sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l', crossorigin='anonymous')
     body
-        block content
-        block foot
-            #footer
-                p Copyright 2021
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            .container-fluid
+                a.navbar-brand(href='/') NodeJS
+                ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                    li.nav-item
+                        a.nav-link(aria-current='page', href='/') Home
+                    li.nav-item
+                        a.nav-link(href='/users') Users
+        .container.mt-5
+            block content

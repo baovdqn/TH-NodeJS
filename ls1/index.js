@@ -13,6 +13,9 @@ const port = 9080;
 app.set('view engine', 'pug');
 app.set('views', './views')
 
+// use static file folder public
+app.use(express.static('public'))
+
 app.use(bodyParser.json()) // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
