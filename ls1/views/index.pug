@@ -1,6 +1,11 @@
-h1 Hello #{name}
-a(href="users") User
-hr
-a(href="users/create") Create
-hr
-a(href="jobs") Job
+extends ./layout/common
+block content
+    h1 Hello #{name}
+    a(href="users") User
+    hr
+    a(href="users/create") Create
+    hr
+    a(href="jobs") Job
+
+block foot
+    p Số lượng người online: 1
