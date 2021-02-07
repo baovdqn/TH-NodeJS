@@ -1,21 +1,15 @@
 {
   "users": [
     {
-      "name": "Phạm Trọng Bảo",
-      "id": "yYUOHZVFN"
-    },
-    {
-      "name": "Đỗ Viết Mạnh",
-      "id": "_GpTrXkAG"
-    },
-    {
       "name": "Nguyễn Hồng Quân",
       "id": "xgWnNDbPY"
     },
     {
       "name": "Phạm Trọng Bảo",
       "phone": "0383829797",
-      "id": "IUdhHYXIX"
+      "id": "IUdhHYXIX",
+      "gmail": "baovdqn@gmail.com",
+      "password": "12345"
     },
     {
       "name": "Đỗ Viết Mạnh",
