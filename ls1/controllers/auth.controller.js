@@ -1,3 +1,5 @@
+const md5 = require('md5');
+
 const db = require('../db');
 
 module.exports.login = (req,res)=>{
@@ -5,7 +7,6 @@ module.exports.login = (req,res)=>{
 };
 
 module.exports.authLogin = (req,res)=>{
-    console.log(req.body);
     const gmail = req.body.gmail;
     const password = req.body.password;
 
@@ -22,7 +23,9 @@ module.exports.authLogin = (req,res)=>{
         return;
     }
 
-    if(password !== user.password){
+    const hashPassword = md5(password);
+
+    if(hashPassword !== user.password){
         res.render('auth/login', {
             errors: [
                 'Sai mật khẩu'
