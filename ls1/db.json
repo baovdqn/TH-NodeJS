@@ -33,5 +33,127 @@
     {
       "name": "Lái xe tăng "
     }
+  ],
+  "products": [
+    {
+      "id": "71257296-2af2-41a5-8278-a1e6736400ab",
+      "name": "Dodge",
+      "img": "https://picsum.photos/200/300",
+      "description": "in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti"
+    },
+    {
+      "id": "514a60e1-375f-4652-aab0-e5251cfbafe6",
+      "name": "Dodge",
+      "img": "https://picsum.photos/200/300",
+      "description": "congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque"
+    },
+    {
+      "id": "0bdf79c1-0aa8-4943-bd17-820e25fd8d80",
+      "name": "Chevrolet",
+      "img": "https://picsum.photos/200/300",
+      "description": "interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien"
+    },
+    {
+      "id": "229bdc2b-37ba-420e-adb8-3d40cafadddb",
+      "name": "Chevrolet",
+      "img": "https://picsum.photos/200/300",
+      "description": "luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper"
+    },
+    {
+      "id": "60b6399d-e69f-49bd-a51b-918019441b7d",
+      "name": "Honda",
+      "img": "https://picsum.photos/200/300",
+      "description": "convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla"
+    },
+    {
+      "id": "59389d74-a0ff-4f83-baea-354a8e5a4419",
+      "name": "Chevrolet",
+      "img": "https://picsum.photos/200/300",
+      "description": "sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla"
+    },
+    {
+      "id": "35caf4c8-1c7c-4d52-b777-bb3699a4de2f",
+      "name": "Audi",
+      "img": "https://picsum.photos/200/300",
+      "description": "bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus"
+    },
+    {
+      "id": "666f9327-4f93-4387-8be1-7570a51d5798",
+      "name": "Acura",
+      "img": "https://picsum.photos/200/300",
+      "description": "ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui"
+    },
+    {
+      "id": "c0362eb3-524a-4680-9f93-621413e3606c",
+      "name": "Acura",
+      "img": "https://picsum.photos/200/300",
+      "description": "purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut"
+    },
+    {
+      "id": "f3fedf88-d9c6-444f-9fdb-ec4a2a026887",
+      "name": "Geo",
+      "img": "https://picsum.photos/200/300",
+      "description": "dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est"
+    },
+    {
+      "id": "f8a5e80c-6f31-4f75-9bd9-b77aae54ba33",
+      "name": "Mercury",
+      "img": "https://picsum.photos/200/300",
+      "description": "nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam"
+    },
+    {
+      "id": "00970a2c-ddba-4bce-8ccf-890356c5fd42",
+      "name": "Mitsubishi",
+      "img": "https://picsum.photos/200/300",
+      "description": "magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem"
+    },
+    {
+      "id": "1f4a031a-085d-4c9e-aa15-bd7cebc03f80",
+      "name": "Mercury",
+      "img": "https://picsum.photos/200/300",
+      "description": "ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam"
+    },
+    {
+      "id": "c536f587-16d3-4aec-ae5e-f4ad2bd1b93c",
+      "name": "Dodge",
+      "img": "https://picsum.photos/200/300",
+      "description": "ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede"
+    },
+    {
+      "id": "3a6297d8-9df8-451f-aa9e-5a86791e260f",
+      "name": "Pontiac",
+      "img": "https://picsum.photos/200/300",
+      "description": "sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede"
+    },
+    {
+      "id": "241a918b-92ba-4c49-b6e4-26e426c1e8b0",
+      "name": "Chevrolet",
+      "img": "https://picsum.photos/200/300",
+      "description": "vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo"
+    },
+    {
+      "id": "febf660c-6b66-48ef-b1b6-9f3adf69c029",
+      "name": "Buick",
+      "img": "https://picsum.photos/200/300",
+      "description": "fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor"
+    },
+    {
+      "id": "b21fa2ad-c036-4bb8-bf64-fcdb80c91b67",
+      "name": "Mercedes-Benz",
+      "img": "https://picsum.photos/200/300",
+      "description": "odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus"
+    },
+    {
+      "id": "404751d2-8483-4574-b2f2-5f648d6a7d33",
+      "name": "Subaru",
+      "img": "https://picsum.photos/200/300",
+      "description": "feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl"
+    },
+    {
+      "id": "2936d0c6-9483-47a1-8c91-44888ed1e8ca",
+      "name": "Ford",
+      "img": "https://picsum.photos/200/300",
+      "description": "ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede"
+    }
   ]
 }
