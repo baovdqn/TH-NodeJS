@@ -1,10 +1,6 @@
 {
   "users": [
     {
-      "name": "Nguyễn Hồng Quân",
-      "id": "xgWnNDbPY"
-    },
-    {
       "name": "Phạm Trọng Bảo",
       "phone": "0383829797",
       "id": "IUdhHYXIX",
@@ -15,6 +11,34 @@
       "name": "Đỗ Viết Mạnh",
       "phone": "0383829797",
       "id": "N-luhdcBS"
+    },
+    {
+      "name": "Đỗ Viết Mạnh",
+      "phone": "123123",
+      "avatar": "127155217_417178632795504_3060721668316591104_n.jpg",
+      "id": "-PPkzi9Tt"
+    },
+    {
+      "name": "Nguyễn Hồng Quân",
+      "phone": "123123",
+      "id": "iosHeH1w4"
+    },
+    {
+      "name": "Phạm Trọng Bảo",
+      "phone": "0147852369",
+      "id": "r2UbVUcvo"
+    },
+    {
+      "name": "Trelo",
+      "phone": "1234321",
+      "id": "STQshJkxS",
+      "avatar": "uploads/ba8da000564605f33f3dd8a45620edee"
+    },
+    {
+      "name": "Phạm Trọng Bảo",
+      "phone": "0383829797",
+      "id": "fQlLxSYMu",
+      "avatar": "uploads/4290aa05bd142742ca6f26544e6fcda2"
     }
   ],
   "jobs": [
