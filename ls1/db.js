@@ -5,7 +5,8 @@ const db = low(adapter) // create obj db
 
 // Set some defaults (required if your JSON file is empty)
 db.defaults({ users: [],
-    jobs:[]
+    jobs:[],
+    sessions: []
 }).write()
 
 module.exports = db;
