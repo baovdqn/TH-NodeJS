@@ -1,9 +1,10 @@
-const db = require('../db');
+const Job = require('../models/job.model')
 
-module.exports.index = (req,res)=>{
+module.exports.index = async (req,res)=>{
+    const jobs = await Job.find();
     res.render('jobs/index',
     {
-        jobs: db.get('jobs').value()
+        jobs: jobs
     });
 };
 
@@ -12,8 +13,8 @@ module.exports.create = (req,res)=>{
 };
 
 module.exports.postCreate = (req,res)=>{
-    // console.log(req.body);
     const errors = [];
+    //check 
     if(!req.body.name){
         errors.push('Chưa nhập tên ngành');
         res.render('jobs/create',{
@@ -21,6 +22,11 @@ module.exports.postCreate = (req,res)=>{
         })
         return;
     }
-    db.get('jobs').push(req.body).write();
+    // save to mongodb
+    const job = new Job(req.body);
+    job.save(function (err) {
+        if (err) return handleError(err);
+        // saved!
+    });
     res.redirect('/jobs')
 }

@@ -6,9 +6,16 @@ const cookieParser = require('cookie-parser')
 const mongoose = require('mongoose');
 
 // connect to mongodb
-mongoose.connect('mongodb://localhost/express-demo');
+mongoose.connect('mongodb://localhost/express-demo', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true
+});
 
 const db = mongoose.connection;
+
+//check connect database
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   // we're connected!

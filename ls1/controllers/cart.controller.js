@@ -1,4 +1,6 @@
 const db = require('../db')
+
+
 module.exports.addTocart = (req,res)=>{
     const productId = req.params.productId;
     const sessionId = req.signedCookies.sessionId;
