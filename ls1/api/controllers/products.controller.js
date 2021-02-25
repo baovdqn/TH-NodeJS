@@ -6,6 +6,13 @@ module.exports.index = async (req, res) => {
     res.json(products)
 };
 
+module.exports.getProduct = async (req, res) => {
+    const products = await Product.find();
+    const id = req.params.id; 
+    const product = products.find((product) =>product._id == id )
+    res.json(product)
+}
+
 module.exports.postProduct = async(req,res) => {
     const product = await Product.create(req.body);
     res.json(product);
