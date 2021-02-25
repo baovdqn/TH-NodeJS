@@ -28,6 +28,8 @@ const jobsRoute = require('./routes/jobs.route');
 const authRoute = require('./routes/auth.route');
 const productRoute = require('./routes/product.route')
 const cartRoute = require('./routes/cart.route')
+const apiUserRoute = require('./api/routes/users.route')
+const apiProductRoute = require('./api/routes/products.route')
 
 //requireMiddleware
 const authMiddleware = require('./middleware/auth.middleware')
@@ -60,7 +62,9 @@ app.use('/users', authMiddleware.requireAuth, usersRoute);
 app.use('/jobs', authMiddleware.requireAuth, jobsRoute);
 app.use('/auth', authRoute);
 app.use('/product', productRoute);
-app.use('/cart', cartRoute)
+app.use('/cart', cartRoute);
+app.use('/api/users', apiUserRoute);
+app.use('/api/products', apiProductRoute);
 
 
 app.listen(port, () => console.log(`Đang được mở ở cổng ${port}`));
