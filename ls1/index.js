@@ -67,4 +67,4 @@ app.use('/api/users', apiUserRoute);
 app.use('/api/products', apiProductRoute);
 
 
-app.listen(port, () => console.log(`Đang được mở ở cổng ${port}`));
+app.listen(port, () => console.log(`App listening at http://localhost:${port}`));

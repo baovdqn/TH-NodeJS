@@ -1,0 +1,66 @@
+html
+    head
+        title Cửa hàng sách PB
+        link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css', integrity='sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l', crossorigin='anonymous')
+        link(rel="stylesheet" href="/styles/custom.css")
+    body
+        nav.navbar.navbar-expand-lg.bg-light.navbar-light.mb-4
+            .container
+                a.navbar-brand(href='#') Navbar
+                button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarSupportedContent.collapse.navbar-collapse
+                    ul.navbar-nav.ml-auto
+                        li.nav-item
+                            a.nav-link(href='#') Đăng nhập 
+                            span.sr-only (current)
+                        li.nav-item
+                            a.nav-link(href='#') Đăng kí
+                        li.nav-item.dropdown
+                            a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Tên tài khoản
+                            .dropdown-menu(aria-labelledby='navbarDropdown')
+                                a.dropdown-item(href='#') Đăng xuất
+
+        .container
+            .row
+                .col-md-8
+                    #carouselExampleIndicators.carousel.slide.mb-2(data-ride='carousel')
+                        ol.carousel-indicators
+                            li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+                            li(data-target='#carouselExampleIndicators', data-slide-to='1')
+                            li(data-target='#carouselExampleIndicators', data-slide-to='2')
+                        .carousel-inner
+                            .carousel-item.active
+                                img.d-block.w-100(src='https://cdn0.fahasa.com/media/magentothem/banner7/Fahasa-Payday-920x420.png', alt='...')
+                            .carousel-item
+                                img.d-block.w-100(src='https://cdn0.fahasa.com/media/magentothem/banner7/AirPAyT22021_920x420.jpg', alt='...')
+                            .carousel-item
+                                img.d-block.w-100(src='https://cdn0.fahasa.com/media/magentothem/banner7/920x420_phienchodocu.png', alt='...')
+                        a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+                            span.carousel-control-prev-icon(aria-hidden='true')
+                            span.sr-only Previous
+                        a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+                            span.carousel-control-next-icon(aria-hidden='true')
+                            span.sr-only Next
+                .col-md-4
+                    img.mb-2(src='https://cf.shopee.vn/file/4e3b6b865d9c430eeb024647db107a7c_xhdpi', style='width: 100%')
+                    img.mb-2(src='http://cf.shopee.vn/file/6ef23a7484734d10d28491f20959d876_xhdpi', style='width: 100%')
+                    img.mb-2(src='https://cf.shopee.vn/file/4e3b6b865d9c430eeb024647db107a7c_xhdpi', style='width: 100%')
+
+
+            .row
+                .col
+                    nav.nav
+                        a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') Xin chào
+                        a.nav-link.active(href='#') Giới thiệu
+                        a.nav-link(href='#') Sản phẩm
+                        a.nav-link(href='#') Khuyến mại
+                        a.nav-link(href='#') Tin tức
+                        a.nav-link.ml-auto(href='#', tabindex='-1', aria-disabled='true') Giỏ hàng ()
+            block content
+
+        block foot
+            script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js', integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj', crossorigin='anonymous')
+            script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', integrity='sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN', crossorigin='anonymous')
+            script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js', integrity='sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF', crossorigin='anonymous')
+
