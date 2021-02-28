@@ -8,12 +8,28 @@ const port = 3000
 app.set('view engine', 'pug');
 app.set('views', './views');
 
+
+//require mongoose
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/bookstore-demo', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true
+});
+
 //static file
 app.use(express.static('public'))
 
-app.get('/', (req,res)=>{
-  res.render('index')
-})
+//import router
+const productRoute = require('./routes/products.route')
+
+// app.get('/', (req,res)=>{
+//   res.render('index')
+// })
+
+app.use('/', productRoute)
+
 
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`)
