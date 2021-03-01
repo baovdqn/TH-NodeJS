@@ -10,6 +10,9 @@ block content
             if errors 
                 each error in errors 
                     .alert.alert-danger #{error}
+            if success 
+                each successes in success 
+                    .alert.alert-success #{successes}
             h3 Đăng kí
             form(method="post", action='')
                 .form-group
