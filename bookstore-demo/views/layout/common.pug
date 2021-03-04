@@ -11,15 +11,18 @@ html
                     span.navbar-toggler-icon
                 #navbarSupportedContent.collapse.navbar-collapse
                     ul.navbar-nav.ml-auto
-                        li.nav-item
-                            a.nav-link(href='/user/signin') Đăng nhập 
-                            span.sr-only (current)
-                        li.nav-item
-                            a.nav-link(href='/user/signup') Đăng kí
-                        li.nav-item.dropdown
-                            a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Tên tài khoản
-                            .dropdown-menu(aria-labelledby='navbarDropdown')
-                                a.dropdown-item(href='#') Đăng xuất
+                        if !user
+                            li.nav-item
+                                a.nav-link(href='/user/signin') Đăng nhập 
+                                span.sr-only (current)
+                            li.nav-item
+                                a.nav-link(href='/user/signup') Đăng kí
+                        if user
+                            li.nav-item.dropdown
+                                a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')= user.name
+                                .dropdown-menu(aria-labelledby='navbarDropdown')
+                                    a.dropdown-item(href='/manager/product') Quản lý sản phẩm
+                                    a.dropdown-item(href='/user/signout') Đăng xuất
 
         .container
             .row
@@ -43,9 +46,9 @@ html
                             span.carousel-control-next-icon(aria-hidden='true')
                             span.sr-only Next
                 .col-md-4
-                    img.mb-2(src='https://cf.shopee.vn/file/4e3b6b865d9c430eeb024647db107a7c_xhdpi', style='width: 100%')
-                    img.mb-2(src='http://cf.shopee.vn/file/6ef23a7484734d10d28491f20959d876_xhdpi', style='width: 100%')
-                    img.mb-2(src='https://cf.shopee.vn/file/4e3b6b865d9c430eeb024647db107a7c_xhdpi', style='width: 100%')
+                    img.mb-1(src='https://cf.shopee.vn/file/4e3b6b865d9c430eeb024647db107a7c_xhdpi', style='width: 100%')
+                    img.mb-1(src='http://cf.shopee.vn/file/6ef23a7484734d10d28491f20959d876_xhdpi', style='width: 100%')
+                    img.mb-1(src='https://cf.shopee.vn/file/4e3b6b865d9c430eeb024647db107a7c_xhdpi', style='width: 100%')
 
 
             .row
@@ -56,7 +59,7 @@ html
                         a.nav-link(href='#') Sản phẩm
                         a.nav-link(href='#') Khuyến mại
                         a.nav-link(href='#') Tin tức
-                        a.nav-link.ml-auto(href='#', tabindex='-1', aria-disabled='true') Giỏ hàng ()
+                        a.nav-link.ml-auto(href='#', tabindex='-1', aria-disabled='true') Giỏ hàng (0)
             block content
 
         block foot

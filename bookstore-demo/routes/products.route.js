@@ -1,25 +1,12 @@
 const express = require('express');
 
 //require model
-const Product = require('../models/products.model')
+const productController = require('../controllers/products.controller')
 const router = express.Router();
 
 
-router.get('/', async (req, res) => {
-    const products = await Product.find();
-    res.render('index', {
-        products: products
-    })
-})
+router.get('/', productController.index)
 
-router.get('/:id', async (req, res) => {
-    const products = await Product.find();
-    const filter = products.filter((product) => {
-        return product.type == req.params.id
-    })
-    res.render('index',{
-        products: filter
-    })
-})
+router.get('/:id', productController.getProduct)
 
 module.exports = router;

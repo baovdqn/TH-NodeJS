@@ -1,0 +1,28 @@
+extends ../layout/common
+block content
+    h2 Tạo mới sản phẩm
+    form(method='post')
+        .form-group
+            label(for='name') Tên sách
+            input#name.form-control(type='text',name='name', placeholder='Tên sách')
+        .form-group
+            label(for='type') Thể loại sách
+            select#type.form-control(name='type')
+                option Sách bán chạy 
+                option Sách văn học
+                option Sách kĩ năng
+                option Sách kinh tế
+                option Sách tiếng anh
+        .form-group
+            label(for='author') Tên tác giả 
+            input#author.form-control(type='text',name='author', placeholder='Tên tác giả')
+        .form-group
+            label(for='price') Giá tiền
+            input#price.form-control(type='text',name='price' placeholder='Giá tiền')
+        .form-group
+            label(for='img') Liên kết ảnh
+            input#img.form-control(type='text',name='img', placeholder='Liên kết ảnh')
+        .form-group
+            label(for='description') Mô tả sản phẩm (Description)
+            textarea#description.form-control(rows='3',name='description')
+        button.btn.btn-success(type='submit') Submit

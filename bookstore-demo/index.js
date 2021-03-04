@@ -1,12 +1,14 @@
 const express = require('express');
 const pug = require('pug');
+var cookieParser = require('cookie-parser');
 
 const app = express()
 const port = 3000
 
-const bodyParser = require('body-parser')
-const multer = require('multer') // v1.0.5
-const upload = multer() // for parsing multipart/form-data
+const bodyParser = require('body-parser');
+const multer = require('multer'); // v1.0.5
+const upload = multer(); // for parsing multipart/form-data
+const session = require('express-session');
 
 app.use(bodyParser.json()) // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
@@ -26,18 +28,33 @@ mongoose.connect('mongodb://localhost/bookstore-demo', {
 });
 
 //static file
-app.use(express.static('public'))
+app.use(express.static('public'));
+
+//cookies
+app.use(cookieParser());
+
+app.use(session({     // config express-session
+  secret: 'bao',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }
+}))
+
+//require middlewares
+const authMiddleware = require('./middlewares/auth.middleware')
 
 //import router
 const productRoute = require('./routes/products.route')
 const userRoute = require('./routes/user.route')
+const managerRoute = require('./routes/manager.route')
 
-// app.get('/', (req,res)=>{
-//   res.render('index')
-// })
 
-app.use('/', productRoute)
+app.use('/',
+  authMiddleware.userName, 
+  productRoute
+);
 app.use('/user', userRoute)
+app.use('/manager', managerRoute)
 
 
 app.listen(port, () => {

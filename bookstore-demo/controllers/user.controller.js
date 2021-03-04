@@ -7,7 +7,14 @@ module.exports.signin = (req, res) => {
 module.exports.signup = (req, res) => {
     res.render('users/sign-up');
 }
+module.exports.signout = (req, res) => {
+    if(req.cookies.cookiesId){
+        res.clearCookie('cookiesId');
+    }
+    res.redirect('/');
+}
 
+//Sign in
 module.exports.postSignin = async (req, res) => {
     const errors = [];
     const username = req.body.username;
@@ -35,6 +42,7 @@ module.exports.postSignin = async (req, res) => {
     }
 
     if (user[0].password == password) {
+        res.cookie('cookiesId', user[0]._id);
         res.redirect('/');
     } 
     else {

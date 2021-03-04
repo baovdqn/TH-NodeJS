@@ -1,0 +1,41 @@
+extends ../layout/common
+block content
+    h2 
+        span.mr-3 Quản trị sản phẩm
+        a.btn.btn-success(type='button', href="/manager/product/create") Thêm sản phẩm
+
+    table.table.table-sm 
+        thead
+            tr
+            th(scope='col') Sản phẩm
+            th(scope='col') Thể loại
+            th(scope='col') Số lượng
+            th(scope='col') Action
+        
+        if products
+            each product in products
+                tbody
+                    tr
+                    td= product.name
+                    td= product.type
+                    td xx
+                    td 
+                        a.btn.btn-secondary.mr-2(href="#") Sửa 
+                        a.btn.btn-danger(href="#") Xóa
+    nav.d-flex(aria-label='Page navigation example')
+        ul.pagination.ml-auto.mt-3
+            if page > 1
+                li.page-item
+                    a.page-link(href='/manager/product?page=' + parseInt(page -1)) Previous
+            else if page = 1
+                li.page-item.disabled
+                    a.page-link(href='#') Previous
+            li.page-item.disabled
+                a.page-link(href='/manager/product?page=' + (page))=page
+            li.page-item
+                a.page-link(href='/manager/product?page=' + (page + 1))= page + 1
+            li.page-item
+                a.page-link(href='/manager/product?page=' + (page + 2))= page + 2
+            li.page-item
+                a.page-link(href='/manager/product?page=' + (page + 1)) Next
+    
